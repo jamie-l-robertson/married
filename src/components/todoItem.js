@@ -39,7 +39,7 @@ const TodoItem = ({ item }) => {
           checked={item.isComplete}
           onChange={toggleItemCompletion}
         />
-        <button onClick={deleteItem}>
+        <button onClick={deleteItem} aria-label="Remove item">
           <RemoveIcon />
         </button>
       </div>

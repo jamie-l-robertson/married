@@ -4,7 +4,7 @@
 
 Simple Todo list using React and Recoil.
 
-[Feel free to make use of it here](https://nervous-ardinghelli-87c071.netlify.app/).
+[Feel free to make use of it here](https://married.netlify.app/).
 
 ### TODO
 
@@ -12,7 +12,7 @@ Simple Todo list using React and Recoil.
 - ~~Persist state using localstorage~~
 - ~~setup hosting~~
 - ~~2nd round styling~~.
-- style filter dropdown
+- ~~style filter dropdown~~
 - create a better logo
 - Implement order functionality.
 

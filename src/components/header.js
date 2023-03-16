@@ -1,23 +1,13 @@
-import React from 'react'
-import TodoListFilters from './todoListFilter';
-
-const getDateInfo = () => {
-  const Today = new Date();
-
-
-  return {
-    day: Today.toLocaleString('default', { day: 'numeric' }),
-    weekday: Today.toLocaleString('default', { weekday: 'long' }),
-    month: Today.toLocaleString('default', { month: 'long' }),
-    year: Today.getFullYear()
-  };
-}
+import React from "react";
+import TodoListFilters from "./todoListFilter";
+import { GetDateInfo } from "../utils";
 
 const Header = () => {
-  const currentDate = getDateInfo();
+  const currentDate = GetDateInfo();
 
   return (
     <header className="header">
+      <h1 className="visually-hidden">Married - A Todolist app</h1>
       <div className="date">
         <span className="day">{currentDate.day}</span>
         <span className="month">{currentDate.month}</span>
@@ -25,8 +15,7 @@ const Header = () => {
       </div>
       <TodoListFilters />
     </header>
-  )
-}
+  );
+};
 
 export default Header;
-

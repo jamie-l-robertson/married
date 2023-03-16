@@ -1,21 +1,19 @@
 {
   "name": "married",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "private": true,
   "author": "Jamie Robertson",
-  "homepage": "https://nervous-ardinghelli-87c071.netlify.app/",
+  "homepage": "https://married.netlify.app/",
   "repository": {
     "type": "git",
     "url": "https://github.com/jamie-l-robertson/married"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "recoil": "*"
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "^5.0.1",
+    "recoil": "^0.7.7",
+    "recoil-persist": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,6 +37,8 @@
     ]
   },
   "devDependencies": {
-    "recoil-persist": "^0.6.0"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2"
   }
 }

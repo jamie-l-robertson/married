@@ -1,11 +1,12 @@
 body {
-  --body-colour: #E8E8E2; 
+  --body-colour: #e8e8e2;
   --primary: rgb(182, 198, 73);
-  --text: #5B6F82;
+  --text: #5b6f82;
+  --text-dark: #405262;
   --lightgray: #bdc1c6;
   --white: #fff;
   --green: #06842c;
-  --red: #CC0000;
+  --red: #cc0000;
   --icon-color: var(--text);
   --pad: 15px;
   --pad-lrg: 25px;
@@ -82,7 +83,6 @@ input[type="checkbox"] {
   border-radius: 100%;
 }
 
-
 input[type="checkbox"]:checked {
   background: url("./icons/checkmark-circle.svg") no-repeat 0 0;
   background-size: 20px 20px;
@@ -123,7 +123,8 @@ h1 {
   text-transform: uppercase;
 }
 
-h2, h3 {
+h2,
+h3 {
   margin-bottom: var(--marg);
 }
 
@@ -147,7 +148,7 @@ p {
 }
 
 .panel {
-  padding:var(--pad-lrg);
+  padding: var(--pad-lrg);
   background-color: var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -204,7 +205,6 @@ p {
   border-top: 1px solid var(--lightgray);
 }
 
-
 .header {
   display: grid;
   width: 100%;
@@ -221,9 +221,8 @@ p {
   float: left;
   font-size: 3.5rem;
   vertical-align: top;
-  line-height: 2.5rem; 
+  line-height: 2.5rem;
   margin-right: 5px;
-
 }
 
 .date .month,
@@ -240,9 +239,10 @@ p {
   border-top: 1px solid var(--lightgray);
 }
 
-.footer {
-  color: var(--text);
-  font-size: 12px;
+.footer,
+.footer p {
+  color: var(--text-dark);
+  font-size: 13px;
   text-align: center;
   padding: var(--pad) 0;
 }
@@ -251,6 +251,17 @@ p {
   display: inline-block;
   width: 18px;
   height: 18px;
-  fill: var(--text);
+  fill: var(--text-dark);
   vertical-align: middle;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

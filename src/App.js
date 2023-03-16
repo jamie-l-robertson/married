@@ -1,23 +1,21 @@
-import React from 'react';
+import React from "react";
 import { RecoilRoot } from "recoil";
-import recoilPersist from 'recoil-persist';
-import { TodoList } from './components/todoList';
+import { recoilPersist } from "recoil-persist";
+import { TodoList } from "./components/todoList";
+import Footer from "./components/footer";
 
 function App() {
-
-  const { RecoilPersist, updateState } = recoilPersist(
-    ['todoListState'],
-    {
-      key: 'recoil-persist',
-      storage: localStorage
-    });
+  recoilPersist({
+    key: "recoil-persist",
+    storage: localStorage,
+  });
 
   return (
-    <RecoilRoot initializeState={updateState}>
-      <RecoilPersist />
-      <div className="app">
+    <RecoilRoot>
+      <main className="app">
         <TodoList />
-      </div>
+        <Footer />
+      </main>
     </RecoilRoot>
   );
 }

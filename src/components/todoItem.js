@@ -45,6 +45,7 @@ const TodoItem = ({ item }) => {
           type="checkbox"
           checked={item.isComplete}
           onChange={toggleItemCompletion}
+          aria-label="Toggle completion status"
         />
         <button onClick={deleteItem} aria-label="Remove item">
           <RemoveIcon />

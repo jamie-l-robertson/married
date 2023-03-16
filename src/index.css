@@ -54,6 +54,12 @@ input + button {
   color: var(--body-colour);
   border: none;
   vertical-align: middle;
+  border-radius: 100%;
+  outline-offset: 2px;
+}
+
+button:focus {
+  outline: 2px solid var(--text-dark);
 }
 
 input[type="text"] {
@@ -87,6 +93,10 @@ input[type="checkbox"]:checked {
   background: url("./icons/checkmark-circle.svg") no-repeat 0 0;
   background-size: 20px 20px;
   border: 0;
+}
+
+input[type="checkbox"]:focus {
+  outline: 2px solid var(--text-dark);
 }
 
 input[type="checkbox"]:checked::before {

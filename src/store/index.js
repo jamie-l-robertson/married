@@ -1,21 +1,23 @@
 import { atom, selector } from "recoil";
 import { recoilPersist } from "recoil-persist";
+import CONSTANTS from "../config/constants";
 
 const { persistAtom } = recoilPersist();
 
 export const todoListState = atom({
-  key: "todoListState",
+  key: CONSTANTS.STOREKEYS.TODOLIST,
   default: [],
   effects_UNSTABLE: [persistAtom],
 });
 
 export const todoListFilterState = atom({
-  key: "todoListFilterState",
+  key: CONSTANTS.STOREKEYS.TODOLISTFILTER,
   default: "Show All",
+  effects_UNSTABLE: [persistAtom],
 });
 
 export const todoListStatsState = selector({
-  key: "todoListStatsState",
+  key: CONSTANTS.STOREKEYS.TODOLISTSTATS,
   get: ({ get }) => {
     const todoList = get(filteredTodoListState);
     const totalNum = todoList.length;
@@ -33,15 +35,15 @@ export const todoListStatsState = selector({
 });
 
 export const filteredTodoListState = selector({
-  key: "filteredTodoListState",
+  key: CONSTANTS.STOREKEYS.FILTEREDTODOLIST,
   get: ({ get }) => {
     const filter = get(todoListFilterState);
     const list = get(todoListState);
 
     switch (filter) {
-      case "Show Completed":
+      case CONSTANTS.FILTERS.COMPLETE:
         return list.filter((item) => item.isComplete);
-      case "Show Uncompleted":
+      case CONSTANTS.FILTERS.UNCOMPLETE:
         return list.filter((item) => !item.isComplete);
       default:
         return list;

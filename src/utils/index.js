@@ -24,3 +24,7 @@ export function ReplaceItemAtIndex(arr, index, newValue) {
 export function RemoveItemAtIndex(arr, index) {
   return [...arr.slice(0, index), ...arr.slice(index + 1)];
 }
+
+export function RandomMessage(arr) {
+  return arr[Math.floor(Math.random()*arr.length)]
+}

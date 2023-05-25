@@ -4,10 +4,14 @@ import { TodoItemCreator } from "./todoItemCreator";
 import { filteredTodoListState } from "../store";
 import Header from "./header";
 import TodoItem from "./todoItem.js";
-import { ReactComponent as CoffeeIcon } from "../icons/coffee-cup.svg";
+import CONSTANTS from "../config/constants";
+import { RandomMessage } from "../utils";
+
+
 
 function TodoList() {
   const todoList = useRecoilValue(filteredTodoListState);
+  const noTasks = RandomMessage(CONSTANTS.NOTASKS)
 
   return (
     <div className="panel">
@@ -18,7 +22,7 @@ function TodoList() {
         ))
       ) : (
         <p className="no-items">
-          No tasks, time for a hot beverage <CoffeeIcon />
+          No tasks, time for a {noTasks}.
         </p>
       )}
       <TodoItemCreator />
